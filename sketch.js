@@ -10,23 +10,35 @@ let x2Speed = 5;  // speed in X direction
 let y2Speed = 5; // speed in Y direction
 let d2 = 20;      // diameter of the ball
 
+let red = 50
+let yellow = 100
+let blue = 50
+
+
 function setup() {
   createCanvas(400, 400);
 }
 
 function draw() {
-background(220); // try commenting this out!
- 
+background(220,20); // try commenting this out!
+
+fill(red,yellow,blue)
+
   // if x hits the right side or the left side of the canvas,
   // switch directions...
   if (x1 > width || x1 < 0) {
+    red = 100
+    blue = 0
+    yellow = random(100)
     x1Speed = x1Speed * -1;  
   }
   x1 = x1 + x1Speed; // adding a negative xSpeed *decreases* x, right?
   
   // same as above, but for the top and bottom of the canvas
   if (y1 > width || y1 < 0) {
-    y1Speed = y1Speed * -1;  
+    y1Speed = y1Speed * -1;
+    blue = 100
+    red = 0
   }
   y1 = y1 + y1Speed;
 
