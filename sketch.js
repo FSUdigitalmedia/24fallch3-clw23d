@@ -18,15 +18,25 @@ let red2 = 50
 let yellow2 = 100
 let blue2 = 50
 
+let squarex = 0;
+let squarey = 0;
+
 function setup() {
   createCanvas(400, 400);
 }
 
+
+
 function draw() {
+
+square(squarex, squarey, 100)
+
+
 background(220,20); // try commenting this out!
 
 
 noStroke()
+
 
   // if x hits the right side or the left side of the canvas,
   // switch directions...
@@ -67,4 +77,12 @@ noStroke()
   y2 = y2 + y1Speed;
   fill(red2,yellow2,blue2)
   ellipse(x2, y2, d2);
+}
+
+fill(0);
+
+function mousePressed() {
+  squarex = random(0,300)
+  squarey = random(0,300)
+
 }
