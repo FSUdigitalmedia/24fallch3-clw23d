@@ -1,13 +1,13 @@
 let x1 = 100;     // x position of circle 1
 let y1 = 0;       // y position
-let x1Speed = 3;  // speed in X direction
+let x1Speed = 5;  // speed in X direction
 let y1Speed = 7; // speed in Y direction
 let d1 = 30;      // diameter
 
 let x2 = 100;     // x position of circle 2
 let y2 = 0;       // y position 
 let x2Speed = 5;  // speed in X direction
-let y2Speed = 5; // speed in Y direction
+let y2Speed = 7; // speed in Y direction
 let d2 = 30;      // diameter
 
 let red1 = 50     //colors for circle 1
@@ -24,6 +24,7 @@ let squarey = 0;
 function setup() {
   createCanvas(400, 400);
 }
+
 
 
 
@@ -75,14 +76,15 @@ noStroke()
   if (y2 > width || y2 < 0) {
     y2Speed = y2Speed * -1;  
   }
-  y2 = y2 + y1Speed;
+  y2 = y2 + y2Speed;
   fill(red2,green2,blue2)
   ellipse(x2, y2, d2);
 
 // change fill to white
 // spawn square in top left corner
-  fill(255);
+  fill(255, 50);
   square(squarex, squarey, 100)
+
 }
 
 // randomize position of square when mouse button pressed
@@ -92,3 +94,17 @@ function mousePressed() {
   squarey = random(0,300)
 
 }
+
+// when a is pressed, increase x speed of ball 1 by 10
+// when s is pressed, decrease by 10
+function keyPressed() {
+  if (key === 'a') {
+    x1Speed = x1Speed + 10
+  } else if (key === 's') {
+    x1Speed = x1Speed - 10
+  }
+  // Uncomment to prevent any default behavior.
+  // return false;
+}
+
+
