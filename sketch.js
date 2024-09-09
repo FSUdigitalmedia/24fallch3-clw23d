@@ -95,16 +95,21 @@ function mousePressed() {
 
 }
 
-// when a is pressed, increase x speed of ball 1 by 10
-// when s is pressed, decrease by 10
+// when a is pressed, randomize horizontal speed of ball 1
+// when s is pressed, randomize vertical speed
+// when spacebar is pressed, make the same speed as ball 2, move next to ball 2
 function keyPressed() {
   if (key === 'a') {
-    x1Speed = x1Speed + 10
+    x1Speed = random(0,20)
   } else if (key === 's') {
-    x1Speed = x1Speed - 10
+    y1Speed = random(0,20)
+  } else if (key === ' ') {
+    x1Speed = x2Speed
+    y1Speed = y2Speed
+    x1 = x2 + 10
+    y1 = y2
   }
   // Uncomment to prevent any default behavior.
   // return false;
 }
-
 
