@@ -10,19 +10,23 @@ let x2Speed = 5;  // speed in X direction
 let y2Speed = 7; // speed in Y direction
 let d2 = 30;      // diameter
 
-let red1 = 50     //colors for circle 1
-let green1 = 100
-let blue1 = 50
+let red1 = 50;     //colors for circle 1
+let green1 = 100;
+let blue1 = 50;
 
-let red2 = 50     //colors for circle 2
-let green2 = 100
-let blue2 = 50
+let red2 = 50;     //colors for circle 2
+let green2 = 100;
+let blue2 = 50;
 
-let squarex = 0;  //square x and y positions
-let squarey = 0;
+let squarex = 50;  //square x and y positions
+let squarey = 50;
+
+let squarex2 = 10;
+let squarey2 = 10;
 
 function setup() {
   createCanvas(400, 400);
+  rectMode(CENTER);
 }
 
 
@@ -82,16 +86,23 @@ noStroke()
 
 // change fill to white
 // spawn square in top left corner
+//change fill to black
+// spawn small square in top left corner
   fill(255, 50);
   square(squarex, squarey, 100)
+  fill(0, 50);
+  square(squarex2, squarey2, 20)
 
 }
 
 // randomize position of square when mouse button pressed
+// place small black square where mouse is pressed
 
 function mousePressed() {
-  squarex = random(0,300)
-  squarey = random(0,300)
+  squarex = random(50,350)
+  squarey = random(50,350)
+  squarex2 = mouseX
+  squarey2 = mouseY
 
 }
 
