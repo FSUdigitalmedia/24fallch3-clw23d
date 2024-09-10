@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
 
-background(220,20); // try commenting this out!
+background(255, 10); // try commenting this out!
 
 
 noStroke()
@@ -88,9 +88,9 @@ noStroke()
 // spawn square in top left corner
 //change fill to black
 // spawn small square in top left corner
-  fill(255, 50);
+  fill(230, 50);
   square(squarex, squarey, 100)
-  fill(0, 50);
+  fill(10, 50);
   square(squarex2, squarey2, 20)
 
 }
