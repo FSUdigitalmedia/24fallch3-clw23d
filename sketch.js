@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
 
-background(255, 10); // try commenting this out!
+background(10, 10); // try commenting this out!
 
 
 noStroke()
@@ -88,15 +88,15 @@ noStroke()
 // spawn square in top left corner
 //change fill to black
 // spawn small square in top left corner
-  fill(230, 50);
+  fill(255, 50);
   square(squarex, squarey, 100)
   fill(10, 50);
   square(squarex2, squarey2, 20)
 
 }
 
-// randomize position of square when mouse button pressed
-// place small black square where mouse is pressed
+// randomize position of large square when mouse button pressed
+// place small square where mouse is pressed
 
 function mousePressed() {
   squarex = random(50,350)
